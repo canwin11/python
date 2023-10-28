@@ -18,3 +18,16 @@ print(codes)
 
 codes = list(filter(lambda c: c > 28000, map(ord, symbols)))
 print(codes)
+
+#
+colors = ["black", "white"]
+sizes = ["s", "m", "l"]
+tshirts = [(color, size) for color in colors for size in sizes]
+print(tshirts)
+
+# genexp
+g = tuple(ord(symbol) for symbol in symbols)
+print(g)
+
+for tshirts in (f"{c} {s}" for c in colors for s in sizes):
+    print(tshirts)
